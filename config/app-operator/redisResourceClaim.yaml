@@ -1,0 +1,11 @@
+apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+kind: ClassClaim
+metadata:
+  name: cache-where-for-dinner
+  namespace: workloads
+spec:
+  classRef:
+    name: cache-crossplane-where-for-dinner
+  parameters:
+    replicas: 1
+    serviceNamespace: service-instances
